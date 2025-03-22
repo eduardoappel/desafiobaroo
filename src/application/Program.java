@@ -28,6 +28,7 @@ public class Program {
 		System.out.println("RELATÓRIO: ");
 		System.out.printf("Consumo = R$ %.2f%n", bill.feeding());
 		System.out.printf("Couvert = R$ %.2f%n", bill.cover());
+		System.out.printf("Ingresso = R$ %.2f%n", bill.ticket(bill.gender));
 
 
 		sc.close();

@@ -38,5 +38,13 @@ public class Bill {
 		}
 	}
 
-	
+	public double ticket(char gender){
+		if (gender == 'M') {
+			return 10.0;
+		} else if (gender == 'F') {
+			return 8.0;
+		} else {
+			return 0.0;
+		}
+	}
 }
