@@ -27,6 +27,7 @@ public class Program {
 
 		System.out.println("RELATÓRIO: ");
 		System.out.printf("Consumo = R$ %.2f%n", bill.feeding());
+		System.out.printf("Couvert = R$ %.2f%n", bill.cover());
 
 
 		sc.close();

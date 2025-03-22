@@ -29,4 +29,14 @@ public class Bill {
 		return beer * BEER_PRICE + barbecue * BARBECUE_PRICE + softDrink * SOFTDRINK_PRICE;
 	}
 
+	public double cover() {
+		if (feeding() > 30.0) {
+			return 0.0;
+		}
+		else {
+			return COUVERT;
+		}
+	}
+
+	
 }
