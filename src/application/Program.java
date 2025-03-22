@@ -3,6 +3,8 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entitites.Bill;
+
 public class Program {
 
 	public static void main(String[] args) {
@@ -10,17 +12,22 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
+		Bill bill = new Bill();
+
 		System.out.println("DESAFIO: Bar OO ");
 
 		System.out.println("Digite sexo (F ou M): ");
-		char sexo = sc.next().charAt(0);
+		bill.gender = sc.next().charAt(0);
 		System.out.println("Digite a quantidade de cervejas: ");
-		int cervejas = sc.nextInt();
+		bill.beer = sc.nextInt();
 		System.out.println("Digite a quantidade de refrigerantes: ");
-		int refrigerantes = sc.nextInt();
+		bill.softDrink = sc.nextInt();
 		System.out.println("Digite a quantidade de espetinhos: ");
-		int espetinhos = sc.nextInt();
-		 
+		bill.barbecue = sc.nextInt();
+
+		System.out.println("RELATÓRIO: ");
+		System.out.printf("Consumo = R$ %.2f%n", bill.feeding());
+
 
 		sc.close();
 
