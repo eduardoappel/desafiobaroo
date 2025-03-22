@@ -30,6 +30,7 @@ public class Program {
 		System.out.printf("Couvert = R$ %.2f%n", bill.cover());
 		System.out.printf("Ingresso = R$ %.2f%n", bill.ticket(bill.gender));
 
+		System.out.printf("\nTotal = R$ %.2f%n", bill.total());
 
 		sc.close();
 
