@@ -7,10 +7,10 @@ public class Bill {
 	public static final double SOFTDRINK_PRICE = 3.0;
 	public static final double COUVERT = 4.0;
 
-	public char gender;
-	public int beer;
-	public int barbecue;
-	public int softDrink;
+	public static char gender;
+	public static int beer;
+	public static int barbecue;
+	public static int softDrink;
 
 	/*
 	 * Em um bar,
@@ -25,11 +25,11 @@ public class Bill {
 	 * artístico não é cobrado.
 	 */
 
-	public double feeding() {
+	public static double feeding() {
 		return beer * BEER_PRICE + barbecue * BARBECUE_PRICE + softDrink * SOFTDRINK_PRICE;
 	}
 
-	public double cover() {
+	public static double cover() {
 		if (feeding() > 30.0) {
 			return 0.0;
 		} else {
@@ -37,7 +37,7 @@ public class Bill {
 		}
 	}
 
-	public double ticket(char gender) {
+	public static double ticket(char gender) {
 		if (gender == 'M') {
 			return 10.0;
 		} else if (gender == 'F') {
@@ -47,7 +47,7 @@ public class Bill {
 		}
 	}
 
-	public double total() {
+	public static double total() {
 		return feeding() + cover() + ticket(gender);
 	}
 }
